@@ -7,6 +7,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+.food-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+margin-top:30px;
+}
+
+.food-card{
+background:#1d3448;
+padding:20px;
+border-radius:12px;
+transition:transform 0.2s;
+}
+
+.food-card:hover{
+transform:scale(1.05);
+}
+
+.food-card img{
+width:100%;
+border-radius:10px;
+}
+
+.food-card h3{
+color:#ffd700;
+margin-top:10px;
+}
 
 body{
 margin:0;
@@ -167,31 +196,54 @@ document.getElementById(id).classList.add("active");
 
 <h1>Greek Food</h1>
 
-<h2>Moussaka</h2>
-<p>A layered dish with eggplant, minced meat, potatoes, and béchamel sauce.</p>
+<h2>Traditional Dishes</h2>
+
+<div class="food-grid">
+
+<div class="food-card">
 <img src="IMG_1719.JPG">
+<h3>Moussaka</h3>
+<p>A layered dish with eggplant, minced meat, potatoes, and béchamel sauce baked to golden perfection.</p>
+</div>
 
-<h2>Souvlaki</h2>
-<p>Small skewers of grilled meat served with pita and tzatziki.</p>
+<div class="food-card">
 <img src="IMG_1720.JPG">
+<h3>Souvlaki</h3>
+<p>Small skewers of grilled meat often pork or chicken served with pita, vegetables, and tzatziki sauce.</p>
+</div>
 
-<h2>Spanakopita</h2>
-<p>A spinach and feta pie wrapped in crispy phyllo pastry.</p>
+<div class="food-card">
 <img src="IMG_1721.JPG">
+<h3>Spanakopita</h3>
+<p>A savory spinach and feta cheese pie wrapped in crisp phyllo pastry.</p>
+</div>
 
-<h2>Metaxa</h2>
-<p>A famous Greek brandy blended with wine and herbs.</p>
+</div>
+
+<h2>Famous Drinks</h2>
+
+<div class="food-grid">
+
+<div class="food-card">
 <img src="IMG_1722.JPG">
+<h3>Metaxa</h3>
+<p>A famous Greek brandy blended with wine and herbs.</p>
+</div>
 
-<h2>Frappe</h2>
-<p>Cold instant coffee with foam.</p>
+<div class="food-card">
 <img src="IMG_1723.JPG">
+<h3>Frappe</h3>
+<p>Cold instant coffee with foam, very popular in summer.</p>
+</div>
 
-<h2>Tsipouro</h2>
+<div class="food-card">
+<h3>Tsipouro</h3>
 <p>A strong grape-based spirit.</p>
+</div>
+
+</div>
 
 <br>
-
 <button onclick="showSection('home')">Back</button>
 
 </div>
