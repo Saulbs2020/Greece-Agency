@@ -2,93 +2,143 @@
 <html>
 <head>
 <title>Greece Odyssey Travel</title>
+
 <style>
+
 body{
-font-family: Arial;
 margin:0;
-background:#0b1c2c;
+font-family:Arial, Helvetica, sans-serif;
+background:#0e1a26;
 color:white;
+cursor:url("https://cur.cursors-4u.net/travel/tra-1/tra30.cur"), auto;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#09121a;
+padding:15px;
+z-index:100;
 text-align:center;
 }
 
-.slide{
-display:none;
-padding:60px;
-height:100vh;
+nav a{
+color:#ffd700;
+margin:0 20px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
 }
 
-.active{
-display:block;
+nav a:hover{
+color:white;
+}
+
+section{
+height:100vh;
+padding-top:100px;
+text-align:center;
+}
+
+h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+.hero{
+background:url("https://images.unsplash.com/photo-1504512485720-7d83a16ee930") center/cover no-repeat;
+}
+
+.athens{
+background:url("https://images.unsplash.com/photo-1505761671935-60b3a7427bad") center/cover no-repeat;
+}
+
+.santorini{
+background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+}
+
+.food{
+background:#122535;
+}
+
+.history{
+background:#162c40;
+}
+
+.tips{
+background:#1d3448;
 }
 
 button{
-padding:10px 20px;
-margin:20px;
+padding:15px 25px;
 font-size:18px;
-border:none;
 background:#ffd700;
+border:none;
+margin-top:20px;
 cursor:pointer;
 }
+
+button:hover{
+background:white;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="slide active">
+<nav>
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#food">Food</a>
+<a href="#history">History</a>
+<a href="#tips">Travel Tips</a>
+</nav>
+
+<section id="home" class="hero">
 <h1>Greece Odyssey Travel</h1>
-<h3>Explore the Land of Gods and Legends</h3>
-<p>Welcome to the ultimate travel experience through Greece.</p>
-</div>
+<p>Discover the beauty, history, and culture of Greece. Travel through ancient cities, breathtaking islands, and delicious Mediterranean cuisine.</p>
+</section>
 
-<div class="slide">
+<section id="destinations" class="athens">
 <h1>Athens</h1>
-<p>Visit the Acropolis and the Parthenon.</p>
-<p>Experience the birthplace of democracy.</p>
-</div>
+<p>Visit the legendary Acropolis and Parthenon. Athens is one of the oldest cities in the world and the birthplace of democracy.</p>
+</section>
 
-<div class="slide">
+<section class="santorini">
 <h1>Santorini</h1>
-<p>Famous for white houses and blue domes.</p>
-<p>Enjoy breathtaking sunsets.</p>
-</div>
+<p>Famous for its white houses and blue domes. Watch some of the most beautiful sunsets in the world.</p>
+</section>
 
-<div class="slide">
-<h1>Crete</h1>
-<p>The largest Greek island.</p>
-<p>Explore ancient ruins and beautiful beaches.</p>
-</div>
+<section id="food" class="food">
+<h1>Greek Food</h1>
+<p>Try amazing traditional dishes like gyros, souvlaki, fresh seafood, and delicious Greek salad with feta cheese.</p>
+</section>
 
-<div class="slide">
-<h1>Why Visit Greece?</h1>
-<p>Rich history</p>
-<p>Beautiful islands</p>
-<p>Amazing food</p>
-</div>
+<section id="history" class="history">
+<h1>Ancient History</h1>
+<p>Greece is home to ancient myths, gods like Zeus and Athena, and important historical discoveries that shaped the world.</p>
+</section>
 
-<button onclick="prev()">Previous</button>
-<button onclick="next()">Next</button>
+<section id="tips" class="tips">
+<h1>Travel Tips</h1>
+<p>Best time to visit: April – October</p>
+<p>Currency: Euro</p>
+<p>Popular activities: Island hopping, beach visits, exploring ruins.</p>
 
-<script>
-let slides=document.querySelectorAll(".slide")
-let index=0
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
+Back to Top
+</button>
 
-function showSlide(i){
-slides.forEach(s=>s.classList.remove("active"))
-slides[i].classList.add("active")
-}
-
-function next(){
-index++
-if(index>=slides.length) index=0
-showSlide(index)
-}
-
-function prev(){
-index--
-if(index<0) index=slides.length-1
-showSlide(index)
-}
-</script>
+</section>
 
 </body>
 </html>
