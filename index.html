@@ -1,92 +1,137 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Greece Odyssey Travel</title>
 
 <style>
 
-body{
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap');
+
+*{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0e1a26;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins;
+background:#0a0f1c;
 color:white;
-cursor:url("https://cur.cursors-4u.net/travel/tra-1/tra30.cur"), auto;
+overflow-x:hidden;
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#09121a;
-padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(10,15,28,0.7);
+backdrop-filter:blur(10px);
 z-index:100;
-text-align:center;
+}
+
+nav h1{
+font-family:Orbitron;
+font-size:20px;
+color:#6ee7ff;
 }
 
 nav a{
-color:#ffd700;
-margin:0 20px;
+color:white;
 text-decoration:none;
-font-weight:bold;
-font-size:18px;
+margin-left:30px;
+font-size:15px;
+transition:0.3s;
 }
 
 nav a:hover{
-color:white;
-}
-
-section{
-height:100vh;
-padding-top:100px;
-text-align:center;
-}
-
-h1{
-font-size:50px;
-margin-bottom:10px;
-}
-
-p{
-font-size:20px;
-max-width:700px;
-margin:auto;
+color:#6ee7ff;
 }
 
 .hero{
-background:url("https://images.unsplash.com/photo-1504512485720-7d83a16ee930") center/cover no-repeat;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle at center,#0d1b3d,#050914);
 }
 
-.athens{
-background:url("https://images.unsplash.com/photo-1505761671935-60b3a7427bad") center/cover no-repeat;
+.hero h1{
+font-family:Orbitron;
+font-size:60px;
+background:linear-gradient(90deg,#6ee7ff,#7c3aed);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.santorini{
-background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
-}
-
-.food{
-background:#122535;
-}
-
-.history{
-background:#162c40;
-}
-
-.tips{
-background:#1d3448;
-}
-
-button{
-padding:15px 25px;
-font-size:18px;
-background:#ffd700;
-border:none;
+.hero p{
 margin-top:20px;
-cursor:pointer;
+font-size:18px;
+opacity:0.8;
 }
 
-button:hover{
-background:white;
+.hero button{
+margin-top:40px;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#6ee7ff,#7c3aed);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+}
+
+.section{
+padding:120px 10%;
+}
+
+.section h2{
+font-family:Orbitron;
+margin-bottom:40px;
+font-size:35px;
+color:#6ee7ff;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#6ee7ff;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#050914;
+opacity:0.7;
 }
 
 </style>
@@ -96,49 +141,133 @@ background:white;
 <body>
 
 <nav>
-<a href="#home">Home</a>
+<h1>Greece Odyssey</h1>
+
+<div>
 <a href="#destinations">Destinations</a>
+<a href="#culture">Culture</a>
 <a href="#food">Food</a>
-<a href="#history">History</a>
-<a href="#tips">Travel Tips</a>
+<a href="#travel">Travel Tips</a>
+</div>
 </nav>
 
-<section id="home" class="hero">
+<section class="hero">
+
 <h1>Greece Odyssey Travel</h1>
-<p>Discover the beauty, history, and culture of Greece. Travel through ancient cities, breathtaking islands, and delicious Mediterranean cuisine.</p>
-</section>
+<p>Explore Ancient Civilizations, Mythology, and the Beautiful Greek Islands</p>
 
-<section id="destinations" class="athens">
-<h1>Athens</h1>
-<p>Visit the legendary Acropolis and Parthenon. Athens is one of the oldest cities in the world and the birthplace of democracy.</p>
-</section>
-
-<section class="santorini">
-<h1>Santorini</h1>
-<p>Famous for its white houses and blue domes. Watch some of the most beautiful sunsets in the world.</p>
-</section>
-
-<section id="food" class="food">
-<h1>Greek Food</h1>
-<p>Try amazing traditional dishes like gyros, souvlaki, fresh seafood, and delicious Greek salad with feta cheese.</p>
-</section>
-
-<section id="history" class="history">
-<h1>Ancient History</h1>
-<p>Greece is home to ancient myths, gods like Zeus and Athena, and important historical discoveries that shaped the world.</p>
-</section>
-
-<section id="tips" class="tips">
-<h1>Travel Tips</h1>
-<p>Best time to visit: April – October</p>
-<p>Currency: Euro</p>
-<p>Popular activities: Island hopping, beach visits, exploring ruins.</p>
-
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
-Back to Top
+<button onclick="document.getElementById('destinations').scrollIntoView({behavior:'smooth'})">
+Explore
 </button>
 
 </section>
 
+<section class="section" id="destinations">
+
+<h2>Top Destinations</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Athens</h3>
+<p>Home of the Acropolis and the birthplace of democracy.</p>
+</div>
+
+<div class="card">
+<h3>Santorini</h3>
+<p>Iconic white houses, blue domes, and legendary sunsets.</p>
+</div>
+
+<div class="card">
+<h3>Crete</h3>
+<p>The largest Greek island with ancient ruins and beaches.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="culture">
+
+<h2>Greek Culture</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Mythology</h3>
+<p>Stories of Zeus, Athena, Poseidon and the Olympic gods.</p>
+</div>
+
+<div class="card">
+<h3>History</h3>
+<p>Ancient Greece shaped philosophy, science, and democracy.</p>
+</div>
+
+<div class="card">
+<h3>Architecture</h3>
+<p>Temples like the Parthenon inspired architecture worldwide.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="food">
+
+<h2>Greek Food</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Gyros</h3>
+<p>A famous Greek street food with meat and pita bread.</p>
+</div>
+
+<div class="card">
+<h3>Souvlaki</h3>
+<p>Grilled meat skewers served with vegetables.</p>
+</div>
+
+<div class="card">
+<h3>Greek Salad</h3>
+<p>Fresh tomatoes, olives, cucumbers, and feta cheese.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="travel">
+
+<h2>Travel Tips</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Best Time</h3>
+<p>Visit from April to October for great weather.</p>
+</div>
+
+<div class="card">
+<h3>Currency</h3>
+<p>The official currency is the Euro.</p>
+</div>
+
+<div class="card">
+<h3>Activities</h3>
+<p>Island hopping, beaches, and exploring ruins.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+Greece Odyssey Travel • Presentation Website
+
+</footer>
+
 </body>
+
 </html>
