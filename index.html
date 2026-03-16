@@ -17,19 +17,23 @@ text-align:center;
 overflow:hidden;
 }
 
-section{
-min-height:100vh;
-padding:80px 20px;
+.section{
+display:none;
+height:100vh;
+padding:60px;
+}
+
+.active{
+display:block;
 }
 
 h1{
-font-size:50px;
-margin-bottom:20px;
+font-size:48px;
 }
 
 h2{
 color:#ffd700;
-margin-top:40px;
+margin-top:30px;
 }
 
 p{
@@ -40,61 +44,48 @@ line-height:1.6;
 }
 
 img{
-max-width:500px;
+max-width:450px;
 margin-top:20px;
 border-radius:10px;
 }
 
-.home{
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-height:100vh;
-background:#162c40;
-}
-
-.menu{
-margin-top:30px;
-}
-
-.menu button{
-padding:15px 25px;
+button{
+padding:14px 25px;
 margin:10px;
-font-size:18px;
+font-size:16px;
 background:#ffd700;
 border:none;
 cursor:pointer;
 font-family:'Orbitron',sans-serif;
 }
 
-.menu button:hover{
+button:hover{
 background:white;
 }
 
-.info{
-background:#1d3448;
-}
-
-.food{
-background:#162c40;
-}
-
-.back{
-margin-top:40px;
-padding:10px 20px;
-background:#ffd700;
-border:none;
-cursor:pointer;
-font-family:'Orbitron',sans-serif;
-}
-
 </style>
+
+<script>
+
+function showSection(id){
+
+let sections=document.querySelectorAll(".section");
+
+sections.forEach(section=>{
+section.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+}
+
+</script>
+
 </head>
 
 <body>
 
-<section class="home" id="home">
+<div id="home" class="section active">
 
 <h1>Greek Odyssey Travel</h1>
 
@@ -102,117 +93,102 @@ font-family:'Orbitron',sans-serif;
 
 <p>Explore the culture, language, religion, and food of Greece.</p>
 
-<div class="menu">
+<br>
 
-<button onclick="location.href='#country'">Country</button>
-
-<button onclick="location.href='#language'">Language</button>
-
-<button onclick="location.href='#religion'">Religion</button>
-
-<button onclick="location.href='#food'">Food</button>
+<button onclick="showSection('country')">Country</button>
+<button onclick="showSection('language')">Language</button>
+<button onclick="showSection('religion')">Religion</button>
+<button onclick="showSection('food')">Food</button>
 
 </div>
 
-</section>
-
-<section id="country" class="info">
+<div id="country" class="section">
 
 <h1>Country</h1>
 
 <p><b>Country:</b> Greece</p>
-
 <p><b>Capital:</b> Athens</p>
 
-<h2>Map of Greece</h2>
+<h2>Map</h2>
 
 <img src="IMG_1718.JPG">
 
-<button class="back" onclick="location.href='#home'">Back</button>
+<br>
 
-</section>
+<button onclick="showSection('home')">Back</button>
 
-<section id="language" class="info">
+</div>
+
+<div id="language" class="section">
 
 <h1>Language</h1>
 
-<p>The official and primary language spoken in Greece is Modern Greek. Over 97% of the population speaks it and it is used in government, education, and everyday life.</p>
+<p>The official language in Greece is Modern Greek. Over 97% of the population speaks it.</p>
 
 <h2>Language Family</h2>
 
-<p>Greek belongs to the Hellenic language family. It does not belong to the Romance, Germanic, or Slavic language families. Instead it forms its own branch of the Indo-European languages called the Hellenic branch.</p>
+<p>Greek belongs to the Hellenic language family, its own branch of Indo-European languages.</p>
 
-<h2>Language Influences</h2>
+<h2>Influences</h2>
 
-<p>Greek stayed mostly independent but borrowed some words from Latin, Turkish, Italian, and French throughout history.</p>
+<p>Greek stayed mostly independent but borrowed words from Latin, Turkish, Italian, and French.</p>
 
-<button class="back" onclick="location.href='#home'">Back</button>
+<br>
 
-</section>
+<button onclick="showSection('home')">Back</button>
 
-<section id="religion" class="info">
+</div>
+
+<div id="religion" class="section">
 
 <h1>Religion</h1>
 
-<p>The main religion in Greece today is Greek Orthodox Christianity. About 81–90% of the population identifies as Greek Orthodox.</p>
+<p>The main religion in Greece is Greek Orthodox Christianity. About 81–90% of people identify as Greek Orthodox.</p>
 
-<h2>Important Religious Influences</h2>
+<h2>Historical Influences</h2>
 
-<p>Ancient Greek polytheism (worship of many gods)</p>
+<p>Ancient Greek polytheism</p>
+<p>Christianity (Greek Orthodox Church)</p>
+<p>Islam during Ottoman rule</p>
 
-<p>Christianity, especially the Greek Orthodox Church</p>
+<br>
 
-<p>Islam introduced during Ottoman rule</p>
+<button onclick="showSection('home')">Back</button>
 
-<button class="back" onclick="location.href='#home'">Back</button>
+</div>
 
-</section>
-
-<section id="food" class="food">
+<div id="food" class="section">
 
 <h1>Greek Food</h1>
 
-<h2>Traditional Dishes</h2>
-
 <h2>Moussaka</h2>
-
-<p>A layered dish with eggplant, minced meat, potatoes, and béchamel sauce baked to golden perfection.</p>
-
+<p>A layered dish with eggplant, minced meat, potatoes, and béchamel sauce.</p>
 <img src="IMG_1719.JPG">
 
 <h2>Souvlaki</h2>
-
-<p>Small skewers of grilled meat often pork or chicken, usually served with pita, vegetables, and tzatziki sauce.</p>
-
+<p>Small skewers of grilled meat served with pita and tzatziki.</p>
 <img src="IMG_1720.JPG">
 
 <h2>Spanakopita</h2>
-
-<p>A savory spinach and feta cheese pie wrapped in crisp phyllo pastry.</p>
-
+<p>A spinach and feta pie wrapped in crispy phyllo pastry.</p>
 <img src="IMG_1721.JPG">
 
-<h2>Famous Foods or Drinks</h2>
-
 <h2>Metaxa</h2>
-
 <p>A famous Greek brandy blended with wine and herbs.</p>
-
 <img src="IMG_1722.JPG">
 
 <h2>Frappe</h2>
-
-<p>Cold instant coffee with foam, very popular in summer.</p>
-
+<p>Cold instant coffee with foam.</p>
 <img src="IMG_1723.JPG">
 
 <h2>Tsipouro</h2>
-
 <p>A strong grape-based spirit.</p>
 
-<button class="back" onclick="location.href='#home'">Back</button>
+<br>
 
-</section>
+<button onclick="showSection('home')">Back</button>
+
+</div>
 
 </body>
 </html>
