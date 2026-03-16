@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Greece Odyssey Travel</title>
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#0b1c2c;
+color:white;
+text-align:center;
+}
+
+.slide{
+display:none;
+padding:60px;
+height:100vh;
+}
+
+.active{
+display:block;
+}
+
+button{
+padding:10px 20px;
+margin:20px;
+font-size:18px;
+border:none;
+background:#ffd700;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="slide active">
+<h1>Greece Odyssey Travel</h1>
+<h3>Explore the Land of Gods and Legends</h3>
+<p>Welcome to the ultimate travel experience through Greece.</p>
+</div>
+
+<div class="slide">
+<h1>Athens</h1>
+<p>Visit the Acropolis and the Parthenon.</p>
+<p>Experience the birthplace of democracy.</p>
+</div>
+
+<div class="slide">
+<h1>Santorini</h1>
+<p>Famous for white houses and blue domes.</p>
+<p>Enjoy breathtaking sunsets.</p>
+</div>
+
+<div class="slide">
+<h1>Crete</h1>
+<p>The largest Greek island.</p>
+<p>Explore ancient ruins and beautiful beaches.</p>
+</div>
+
+<div class="slide">
+<h1>Why Visit Greece?</h1>
+<p>Rich history</p>
+<p>Beautiful islands</p>
+<p>Amazing food</p>
+</div>
+
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+
+<script>
+let slides=document.querySelectorAll(".slide")
+let index=0
+
+function showSlide(i){
+slides.forEach(s=>s.classList.remove("active"))
+slides[i].classList.add("active")
+}
+
+function next(){
+index++
+if(index>=slides.length) index=0
+showSlide(index)
+}
+
+function prev(){
+index--
+if(index<0) index=slides.length-1
+showSlide(index)
+}
+</script>
+
+</body>
+</html>
