@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Greek Odyssey Travel</title>
 
@@ -9,43 +10,19 @@
 
 body{
 margin:0;
-font-family:'Orbitron', sans-serif;
+font-family:'Orbitron',sans-serif;
 background:#0e1a26;
 color:white;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#09121a;
-padding:15px;
-z-index:100;
 text-align:center;
-}
-
-nav a{
-color:#ffd700;
-margin:0 20px;
-text-decoration:none;
-font-weight:bold;
-font-size:18px;
-}
-
-nav a:hover{
-color:white;
 }
 
 section{
 min-height:100vh;
-padding-top:120px;
-padding-left:40px;
-padding-right:40px;
-text-align:center;
+padding:80px 20px;
 }
 
 h1{
-font-size:48px;
+font-size:50px;
 margin-bottom:20px;
 }
 
@@ -55,14 +32,43 @@ margin-top:40px;
 }
 
 p{
-font-size:20px;
 max-width:800px;
 margin:auto;
+font-size:18px;
 line-height:1.6;
 }
 
-.hero{
+img{
+max-width:500px;
+margin-top:20px;
+border-radius:10px;
+}
+
+.home{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:100vh;
 background:#162c40;
+}
+
+.menu{
+margin-top:30px;
+}
+
+.menu button{
+padding:15px 25px;
+margin:10px;
+font-size:18px;
+background:#ffd700;
+border:none;
+cursor:pointer;
+font-family:'Orbitron',sans-serif;
+}
+
+.menu button:hover{
+background:white;
 }
 
 .info{
@@ -73,60 +79,55 @@ background:#1d3448;
 background:#162c40;
 }
 
-img{
-margin-top:20px;
-border-radius:10px;
-max-width:80%;
-}
-
-button{
-padding:15px 25px;
-font-size:18px;
+.back{
+margin-top:40px;
+padding:10px 20px;
 background:#ffd700;
 border:none;
-margin-top:20px;
 cursor:pointer;
-font-family:'Orbitron', sans-serif;
-}
-
-button:hover{
-background:white;
+font-family:'Orbitron',sans-serif;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#country">Country</a>
-<a href="#language">Language</a>
-<a href="#religion">Religion</a>
-<a href="#food">Food</a>
-</nav>
-
-<section id="home" class="hero">
+<section class="home" id="home">
 
 <h1>Greek Odyssey Travel</h1>
 
 <img src="IMG_1717.JPG" width="200">
 
-<p>Explore the history, culture, language, and delicious food of Greece.</p>
+<p>Explore the culture, language, religion, and food of Greece.</p>
+
+<div class="menu">
+
+<button onclick="location.href='#country'">Country</button>
+
+<button onclick="location.href='#language'">Language</button>
+
+<button onclick="location.href='#religion'">Religion</button>
+
+<button onclick="location.href='#food'">Food</button>
+
+</div>
 
 </section>
 
 <section id="country" class="info">
 
-<h1>Country Information</h1>
+<h1>Country</h1>
 
 <p><b>Country:</b> Greece</p>
+
 <p><b>Capital:</b> Athens</p>
 
 <h2>Map of Greece</h2>
 
-<img src="IMG_1718.JPG" width="400">
+<img src="IMG_1718.JPG">
+
+<button class="back" onclick="location.href='#home'">Back</button>
 
 </section>
 
@@ -144,6 +145,8 @@ background:white;
 
 <p>Greek stayed mostly independent but borrowed some words from Latin, Turkish, Italian, and French throughout history.</p>
 
+<button class="back" onclick="location.href='#home'">Back</button>
+
 </section>
 
 <section id="religion" class="info">
@@ -155,8 +158,12 @@ background:white;
 <h2>Important Religious Influences</h2>
 
 <p>Ancient Greek polytheism (worship of many gods)</p>
+
 <p>Christianity, especially the Greek Orthodox Church</p>
+
 <p>Islam introduced during Ottoman rule</p>
+
+<button class="back" onclick="location.href='#home'">Back</button>
 
 </section>
 
@@ -164,24 +171,45 @@ background:white;
 
 <h1>Greek Food</h1>
 
+<h2>Traditional Dishes</h2>
+
 <h2>Moussaka</h2>
+
+<p>A layered dish with eggplant, minced meat, potatoes, and béchamel sauce baked to golden perfection.</p>
+
 <img src="IMG_1719.JPG">
 
 <h2>Souvlaki</h2>
+
+<p>Small skewers of grilled meat often pork or chicken, usually served with pita, vegetables, and tzatziki sauce.</p>
+
 <img src="IMG_1720.JPG">
 
 <h2>Spanakopita</h2>
+
+<p>A savory spinach and feta cheese pie wrapped in crisp phyllo pastry.</p>
+
 <img src="IMG_1721.JPG">
 
-<h2>Greek Food</h2>
+<h2>Famous Foods or Drinks</h2>
+
+<h2>Metaxa</h2>
+
+<p>A famous Greek brandy blended with wine and herbs.</p>
+
 <img src="IMG_1722.JPG">
 
-<h2>Greek Drink</h2>
+<h2>Frappe</h2>
+
+<p>Cold instant coffee with foam, very popular in summer.</p>
+
 <img src="IMG_1723.JPG">
 
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
-Back to Top
-</button>
+<h2>Tsipouro</h2>
+
+<p>A strong grape-based spirit.</p>
+
+<button class="back" onclick="location.href='#home'">Back</button>
 
 </section>
 
