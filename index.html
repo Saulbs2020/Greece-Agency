@@ -31,7 +31,7 @@ transform:scale(1.05);
 width:100%;
 border-radius:10px;
 }
--- IMG_1729.jpeg
+
 .food-card h3{
 color:#ffd700;
 margin-top:10px;
@@ -101,19 +101,13 @@ background:white;
 </style>
 
 <script>
-
 function showSection(id){
-
 let sections=document.querySelectorAll(".section");
-
 sections.forEach(section=>{
 section.classList.remove("active");
 });
-
 document.getElementById(id).classList.add("active");
-
 }
-
 </script>
 
 </head>
@@ -133,6 +127,7 @@ document.getElementById(id).classList.add("active");
 <button onclick="showSection('country')">Country</button>
 <button onclick="showSection('language')">Language</button>
 <button onclick="showSection('religion')">Religion</button>
+<button onclick="showSection('culture')">Culture</button>
 <button onclick="showSection('food')">Food</button>
 
 </div>
@@ -192,6 +187,34 @@ document.getElementById(id).classList.add("active");
 
 </div>
 
+<!-- NEW CULTURE SECTION -->
+
+<div id="culture" class="section">
+
+<h1>Culture</h1>
+
+<h2>Traditions</h2>
+
+<p>Greek Easter is the most important celebration, with lamb roasts, fireworks, and large family gatherings.</p>
+
+<p>Apokries (Carnival) is a festive time with costumes, parades, and parties before Lent.</p>
+
+<p>Panigiria are traditional village feasts with music, dancing, and food.</p>
+
+<h2>Beliefs</h2>
+
+<p>Many people believe in the "Evil Eye" and use charms or symbols for protection.</p>
+
+<h2>Family Traditions</h2>
+
+<p>It is common to name children after their grandparents to honor family heritage.</p>
+
+<br>
+
+<button onclick="showSection('home')">Back</button>
+
+</div>
+
 <div id="food" class="section">
 
 <h1>Greek Food</h1>
@@ -203,19 +226,31 @@ document.getElementById(id).classList.add("active");
 <div class="food-card">
 <img src="IMG_1719.JPG">
 <h3>Moussaka</h3>
-<p>A layered dish with eggplant, minced meat, potatoes, and béchamel sauce baked to golden perfection.</p>
+<p>A layered dish with eggplant, minced meat, and béchamel sauce.</p>
 </div>
 
 <div class="food-card">
 <img src="IMG_1720.JPG">
 <h3>Souvlaki</h3>
-<p>Small skewers of grilled meat often pork or chicken served with pita, vegetables, and tzatziki sauce.</p>
+<p>Grilled meat skewers served with pita and vegetables.</p>
 </div>
 
 <div class="food-card">
 <img src="IMG_1721.JPG">
 <h3>Spanakopita</h3>
-<p>A savory spinach and feta cheese pie wrapped in crisp phyllo pastry.</p>
+<p>A spinach and feta cheese pie in crispy pastry.</p>
+</div>
+
+<div class="food-card">
+<img src="IMG_1724.JPG">
+<h3>Gyros</h3>
+<p>Meat cooked on a vertical rotisserie served in pita bread.</p>
+</div>
+
+<div class="food-card">
+<img src="IMG_1725.JPG">
+<h3>Tzatziki</h3>
+<p>A refreshing yogurt dip with cucumber, garlic, and herbs.</p>
 </div>
 
 </div>
@@ -227,19 +262,19 @@ document.getElementById(id).classList.add("active");
 <div class="food-card">
 <img src="IMG_1722.JPG">
 <h3>Metaxa</h3>
-<p>A famous Greek brandy blended with wine and herbs.</p>
+<p>A Greek brandy blended with wine and herbs.</p>
 </div>
 
 <div class="food-card">
 <img src="IMG_1723.JPG">
 <h3>Frappe</h3>
-<p>Cold instant coffee with foam, very popular in summer.</p>
+<p>A cold foamy iced coffee popular in summer.</p>
 </div>
 
 <div class="food-card">
 <img src="IMG_1729.jpeg">
 <h3>Tsipouro</h3>
-<p>A strong grape-based spirit.</p>
+<p>A strong grape-based alcoholic drink.</p>
 </div>
 
 </div>
